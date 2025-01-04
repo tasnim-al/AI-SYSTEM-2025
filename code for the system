@@ -16,7 +16,7 @@ for product in products:
     else:
         print(" Notifications are disabled.")
   
-print("\n🎯 Personalized Recommendations:")
+print("\n Personalized Recommendations:")
 for product in products:
     if product["category"] in user_activity: 
         print(f"- {product['name']} ({product['category']})")
