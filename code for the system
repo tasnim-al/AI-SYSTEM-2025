@@ -1,0 +1,22 @@
+user_activity = ["electronics", "books", "fashion"]  
+user_preferences = {"notifications": True, "discount_alerts": True}
+products = [
+    {"name": "Laptop", "category": "electronics", "price": 1000},
+    {"name": "Book", "category": "books", "price": 20},
+    {"name": "T-shirt", "category": "fashion", "price": 15}
+]
+
+for product in products:
+    if user_preferences["notifications"]: 
+        if product["category"] in user_activity: 
+            if product["price"] > 50:  
+                print(f" Premium Deal: Check out the {product['name']} in {product['category']}!")
+            else:
+                print(f" Special Offer: Get your {product['name']} now!")
+    else:
+        print(" Notifications are disabled.")
+  
+print("\n🎯 Personalized Recommendations:")
+for product in products:
+    if product["category"] in user_activity: 
+        print(f"- {product['name']} ({product['category']})")
